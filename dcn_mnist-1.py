@@ -27,8 +27,8 @@ def weight_variable(shape, initializer=None):
     '''
 
     # IMPLEMENT YOUR WEIGHT_VARIABLE HERE
-    initial = tf.xavier_initializer(shape, stddev=0.1)
-    W = tf.Variable(initial)
+   initial = tf.truncated_normal(shape, stddev=0.1)
+  return tf.Variable(initial)
     return W
 
 
